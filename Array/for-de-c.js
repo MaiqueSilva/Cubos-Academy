@@ -15,7 +15,6 @@ for (let i = 0; i < nomesDeEstudantes.length; i++) {
 
 
 
-
 // let indice = 0
 
 // while (indice < nomesDeEstudantes.length) { //while é "enquanto" em portugues.
