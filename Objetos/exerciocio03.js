@@ -20,5 +20,15 @@ const cartao = {
     ]
 }
 
-// for (const item of cartao.produtos) 
-
+//imprima o nome do cliente
+console.log(cartao.nome);
+//imprima a idade do cliente
+console.log(cartao.idade);
+//modifique a idade do cliente
+cartao.idade = 25;
+//imprima a nova idade do cliente
+console.log(cartao.idade);
+//imprima o nome do primeiro produto consumido
+console.log(cartao.produtos[0].nome);
+//imprima o preço do ultimo produto
+console.log(cartao.produtos[2].precoUnit);

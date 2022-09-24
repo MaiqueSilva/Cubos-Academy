@@ -1,3 +1,7 @@
+// faca um programa que imprime uma mensagem, chamando o cliente pelo nome  e informando o valor que ele deve pagar.
+
+let totalPagar = 0
+
 const cartao = {
     nome: "Maique",
     idade: 30,
@@ -20,5 +24,8 @@ const cartao = {
     ]
 }
 
-// for (const item of cartao.produtos) 
+for (const item of cartao.produtos) {
+    totalPagar += item.precoUnit * item.unidade;
+}
 
+console.log(`Sr(a) ${cartao.nome}, o total a pagar é R$ ${(totalPagar / 100).toFixed(2)}`)
