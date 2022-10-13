@@ -3,6 +3,7 @@
 //tem que ter pelo menos um ponto depois do @
 
 //INDEXOF = SERVE PARA LOCALIZAR UMA STRING OU PALAVRA ESPECIFICA E IRA RETORNAR O INDICE
+//lastindex() faz de traz para frente
 
 const email = "maique.almeida@hotmail.com";
 
