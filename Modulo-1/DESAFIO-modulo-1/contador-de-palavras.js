@@ -12,7 +12,7 @@
 
 // Imprima na tela a quantidade de palavras contidas no texto.
 
-const texto = "Cuidado, pois usuarios as vezes deixam espacos vazios no fim do texto sem querer                "
+const texto = "Cuidado, pois usuarios as vezes deixam  espacos vazios no fim do texto sem querer"
 
 
 
@@ -20,10 +20,11 @@ const texto = "Cuidado, pois usuarios as vezes deixam espacos vazios no fim do t
 
 
 
-const limparEspaco = texto.trim();
+const limparEspaco = texto.replace("  ", " ").trim();
 const contador = limparEspaco.split(" ");
 const quantpalavras = contador.length;
 console.log(quantpalavras)
+console.log(contador.length)
 
 
 
