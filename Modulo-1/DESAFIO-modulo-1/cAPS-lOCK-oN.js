@@ -7,14 +7,17 @@ function palavra(input) {
 
     let palavraEditada = "";
 
-
-    if (input === input.toUpperCase() || input[0] === input[0].toLowerCase() && input[1] === input[1].toUpperCase()) {
+    //se entrada for igual a entrada com letra maiscula ou primeira letra da entrada for igual letra maiscula e a segunda letra maiscula
+    if (input === input.toUpperCase() || input[0] === input[0].toLowerCase() && input.slice(1) === input.slice(1).toUpperCase()) {
 
 
         for (let item of input) {
+            //se item for igual letra minuscula
             if (item === item.toLowerCase()) {
+                //item vai ser igual letra maiuscula
                 item = item.toUpperCase();
                 palavraEditada += item;
+                //se item for igual letra maiscula, vai virar minuscula
             } else if (item === item.toUpperCase()) {
                 item = item.toLowerCase();
                 palavraEditada += item;
@@ -29,7 +32,7 @@ function palavra(input) {
 
 }
 
-palavra("aJJJJJ")
+palavra("aDaaDDDDD")
 
 
 

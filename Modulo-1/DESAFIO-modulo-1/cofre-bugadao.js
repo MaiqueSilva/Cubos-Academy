@@ -6,26 +6,60 @@
 
 function senha(input) {
 
-    let separarEntrada = input.split(" ")
+    let separarEntrada = input.split("\n");
+
     let senha = separarEntrada[0];
     let senhaDigitada = separarEntrada[1];
     let senhaCerta = ""
+
+    console.log(separarEntrada)
+
 
 
     for (let i = 0; i < senhaDigitada.length; i++) {
 
         let indice = senha.indexOf(senhaDigitada[i]);
 
-        if (indice >= 0 && indice >= senhaCerta.length - 1) {
-            senhaCerta += senha[indice]
+        if (indice === 0) {
+            senhaCerta += senha[indice];
+            senha = senha.slice(1);
         }
-
     }
-    if (senhaCerta === senha) {
+    if (senhaCerta === separarEntrada[0]) {
         console.log("SIM")
     } else {
         console.log("NAO")
     }
 
 }
-senha("ccubos ccugcgbyos")
+senha("cubos ",
+    "ewvelrabsocaeln")
+
+
+// function senha(input) {
+
+
+//     let senha = input[0];
+//     let senhaDigitada = input[1];
+//     let senhaCerta = ""
+
+
+//     for (let i = 0; i < senhaDigitada.length; i++) {
+
+//         let indice = senha.indexOf(senhaDigitada[i]);
+
+//         if (indice === 0) {
+//             senhaCerta += senha[indice];
+//             senha = senha.slice(1);
+//         }
+
+
+//     }
+//     if (senhaCerta === input[0]) {
+//         console.log("SIM")
+//     } else {
+//         console.log("NAO")
+//     }
+
+// }
+// senha(["cubos", "ewvelrabsocaeln"])

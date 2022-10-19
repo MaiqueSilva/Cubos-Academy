@@ -34,14 +34,16 @@ function solucao(min, km) {
 
 
         // Se for mais que 20 minutos e menos de 10 km
+        // cada min adicional (acima de 20) fica mais barato, passando a custar apenas 30 cetavos por minuto.
     } else if (min > 20 && km <= 10) {
         valorPorMinuto = (min - 20) * 30;
         valorFinal = valorPorMinuto + (20 * 50) + valorPorQuilometros;
         console.log(Math.floor(valorFinal));
 
         // Se for menos que 20 minutos e mais de 10 km
+        // cada km adicional (acima de 10) fica mais barato, passando a custar apenas 50 centavos por km
     } else if (min <= 20 && km > 10) {
-        valorPorQuilometros = (km - 10) * 30;
+        valorPorQuilometros = (km - 10) * 50;
         valorFinal = valorPorQuilometros + (10 * 70) + valorPorMinuto;
         console.log(Math.floor(valorFinal));
 

@@ -12,31 +12,24 @@
 
 // Imprima na tela a quantidade de palavras contidas no texto.
 
-const texto = "Cuidado,        e        pois usuarios as vezes deixam                 espacos vazios no fim do texto sem querer"
+const texto = "               Cuidado, pois usuarios as vezes deixam      é           espacos vazios no fim do texto sem querer"
 
 
+// Dividindo a RegEx e replace em partes:
+
+// \s - qualquer espaço em branco
+// {2,} - em quantidade de dois ou mais
+// g - apanhar todas as ocorrências, não só a primeira
 
 
-
-
-
-const limparEspaco = texto.replace(/\s+/g, " ").trim();
+const limparEspaco = texto.replace(/\s{2,}/g, ' ').trim();
 const contador = limparEspaco.split(" ");
-const quantpalavras = contador.length;
-console.log(quantpalavras)
-// console.log(contador.length)
 
+let quantpalavras = [];
 
-
-// parte do codigo antigo, tirei essa para melhorar usando o de cima.
-// let contadorPalavra = 0
-
-
-
-// for (let item of contador) {
-//     contadorPalavra++
-// }
-
-// console.log(contadorPalavra)
-
-
+for (let item of contador) {
+    if (item != "") {
+        quantpalavras.push(item)
+    }
+}
+console.log(quantpalavras.length)
