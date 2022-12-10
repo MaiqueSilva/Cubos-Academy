@@ -1,0 +1,12 @@
+{
+    "vendas": [
+        {
+            "produto": {
+                "id": 5,
+                "nome": "Cabo USB 2 Metros",
+                "valor": 1990
+            },
+            "quantidade": 5
+        }
+    ]
+}
